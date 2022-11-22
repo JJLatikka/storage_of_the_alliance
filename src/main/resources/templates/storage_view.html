@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fi" xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+  <head>
+    <meta charset="UTF-8">
+    <title>Storage_view</title>
+    <link rel="stylesheet" href="style/storage_view.css"></link>
+  </head>
+  <body>
+    <div class="panes">
+      <span class="title">Säilöt</span>
+      <span class="title">Esineet</span>
+      <span class="title">Toiminnot</span>
+    </div>
+    <div class="panes">
+      <div class="pane left select_titles">
+        <span class="select_name">Nimi:</span>
+        <span class="select_status">Tilaa:</span>
+      </div>
+      <div class="pane middle select_titles">
+        <span class="select_name">Nimi:</span>
+        <span class="select_status">Poissa:</span>
+      </div>
+      <div class="pane right select_titles"></div>
+    </div>
+    <div class="panes">
+      <div class="pane left">
+        <select id="containers" class="list" size=2></select>
+        <select id="container_status" class="list status" size=2></select>
+      </div>
+      <div class="pane middle">
+        <select id="items" class="list" size=2></select>
+        <select id="item_status" class="list status" size=2></select>
+      </div>
+      <div class="pane right">
+        <div id="buttons" class="grid_elements">
+          <button id="find" class="grid_element button" onclick="find()">ETSI</button>
+          <button sec:authorize="hasAuthority('ADMIN')" id="delete" class="grid_element button"
+            onclick="del()">POISTA</button>
+          <button sec:authorize="hasAuthority('USER')" id="delete" class="grid_element button"
+            onclick="#"></button>
+          <button sec:authorize="hasAuthority('ADMIN')" id="add" class="grid_element button"
+            onclick="add()">LISÄÄ</button>
+          <button sec:authorize="hasAuthority('USER')" id="add" class="grid_element button"
+            onclick="#"></button>
+          <form id="end" th:action="@{/logout}" method="post"><input class="grid_element button"
+            type="submit" value="LOPETA"/></form>
+        </div>
+        <div id="find_item" class="grid_elements">
+          <label class="input_title">Mikä esine?</label>
+          <input id="find_item_name" class="grid_element input_name" type="text" size="8">
+          <button class="grid_element button confirm_function" onclick="findItem()">ETSI</button>
+          <button class="grid_element button cancell_function" onclick="hideFindI()">PERU</button>
+        </div>
+        <div id="add_container" class="grid_elements">
+          <label class="input_title">Säilön nimi:</label>
+          <input id="add_container_name" class="grid_element input_name" type="text" size="8">
+          <button class="grid_element button confirm_function" onclick="addContainer()">LISÄÄ</button>
+          <button class="grid_element button cancell_function" onclick="hideAddC()">PERU</button>
+        </div>
+        <div id="add_items">
+          <span id="item_names_title" class="item_names">Lisättävät esineet:</span>
+          <input id="0" class="item_names item_name" type="text">
+          <input id="1" class="item_names item_name" type="text">
+          <input id="2" class="item_names item_name" type="text">
+          <input id="3" class="item_names item_name" type="text">
+          <input id="4" class="item_names item_name" type="text">
+          <input id="5" class="item_names item_name" type="text">
+          <div id="grid_elements_mod">
+            <button id="confirm_add_items" class="grid_element button" onclick="addItems()">LISÄÄ</button>
+            <button id="cancell_add_items" class="grid_element button" onclick="hideAddI()">PERU</button>
+          </div>
+        </div>
+        <div id="feedback">
+          <textarea id="results" wrap="off" readonly></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/variables.js"></script>
+    <script th:inline="javascript">userStatus = [[${role}]];</script>
+    <script src="scripts/lists.js"></script>
+    <script src="scripts/buttons.js"></script>
+    <script src="scripts/listeners.js"></script>
+    <script th:if="${greetings} != null" type="text/javascript" th:data="${greetings}">
+      alert(document.currentScript.getAttribute("data"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+
+.list {
+    width: 85%;
+    height: 100%;
+    padding: 1vh 0 1vh 0;
+    background-color: #C4C4C4;
+    scrollbar-width: none;
+}
+
+option {
+    height: 4vh;
+    padding: 0 1vw 0 1vw;
+    font-family: "PTSans";
+    font-size: 2.5vh;
+}
+
+option:checked, option:active {
+    background: linear-gradient(#FF7700, #FF7700);
+}
+
+.status {
+  width: 15%;
+  text-align: center;
+}
+
+.option:checked, .option:active {
+    background: linear-gradient(#C4C4C4, #C4C4C4);
+}
+.checkbox {
+    appearance: none;
+    height: 3vh;
+    width:  1.5vw;
+    border: 0.33em solid #C4C4C4;
+    border-radius: 50%;
+}
+
+#feedback {
+    display: flex;
+    height: 66.66%;
+}
+
+#results {
+    width: 99%;
+    height: 85%;
+    border: 0;
+    outline: 0;
+    background-color: #C4C4C4;
+    resize: none;
+    user-select: none;
+    font-family: "PTSans";
+    font-size: 2.5vh;
+    color: #000000;
+}

@@ -1,0 +1,47 @@
+
+#add_items {
+    display: none;
+    flex-direction: column;
+    background-color: #C4C4C4;
+    height: 97.5%
+}
+
+.item_names {
+    height: 4vh;
+}
+
+#item_names_title {
+    margin: 5vh 0 2.5vh 0;
+    font-family: "PTSans";
+    font-size: 3.25vh;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.item_name {
+    width: 66.66%;
+    margin: 2vh 0 2vh 0;
+    font-family: "PTSans";
+    font-size: 2.875vh;
+    accent-color: #FF7700;
+    align-self: center;
+    background-color: #C4C4C4;
+}
+
+#grid_elements_mod {
+    height: 8.33%;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 6.7vh 0 4.7vh 0;
+}
+
+#confirm_add_items {
+    grid-area: 1 / 2 / 1 / 6;
+    height: 5.7vh;
+}
+
+#cancell_add_items {
+    grid-area: 1 / 7 / 1 / 11;
+    height: 5.7vh;
+}

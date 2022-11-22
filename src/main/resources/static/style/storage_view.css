@@ -1,0 +1,64 @@
+
+@import "global.css";
+@import "lists.css";
+@import "grid_elements.css";
+@import "add_items.css";
+
+.panes {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    width: 33.33%;
+    height: 5vh;
+    margin: 1.5vh 0 0.75vh 0;
+    font-family: "PTSans";
+    font-size: 3.25vh;
+    font-weight: lighter;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #7A98B4;
+}
+
+.pane {
+    display: flex;
+    flex-direction: row;
+    width: 33.33%;
+    margin: 0 1vw 1.5vh 1vw;
+    height: 85vh;
+}
+
+.left {
+    align-self: left;
+    background-color: #C4C4C4;
+}
+
+.middle {
+    align-self: baseline;
+    background-color: #C4C4C4;
+}
+
+.right {
+    align-self: right;
+    background-color: #7A98B4;
+    display: block;
+}
+
+.select_titles {
+    height: 2.5vh;
+    margin-bottom: 0;
+    font-family: "PTSans";
+    font-size: 2vh;
+    font-weight: lighter;
+}
+
+.select_name {
+    width: 85%;
+    padding-left: 1vw;
+}
+
+.select_status {
+    width: 15%;
+    text-align: center;
+}

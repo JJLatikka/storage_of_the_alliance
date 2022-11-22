@@ -1,0 +1,70 @@
+
+@import "global.css";
+
+#title {
+    height: 17.5vh;
+    font-family: "Quintessential";
+    font-size: 12.5vh;
+    color: #FF7700;
+    text-align: center;
+}
+
+.panes {
+    display: flex;
+    flex-direction: row;
+}
+
+.pane {
+    height: 80vh;
+}
+
+#left {
+    width: 66.66vw;
+    display: flex;
+    align-items: center;
+    margin-left: 16.66vw;
+}
+
+#oystercatcher {
+    width: 90%;
+    height: 80%;
+}
+
+#right {
+    width: 33.33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 9vw;
+}
+
+.form_element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-family: "PTSans";
+    font-size: 3.25vh;
+    font-weight: lighter;
+    color: #FFFFFF;
+}
+
+input {
+    width: 10vw;
+    height: 5.7vh;
+    margin: 2.5vh 0 5vh 0;
+    font-family: "PTSans";
+    font-size: 2.875vh;
+    font-weight: lighter;
+    color: #000000;
+    background-color: #C4C4C4;
+    accent-color: #FF7700;
+}
+
+#button {
+    margin-top: 10vh;
+    font-family: "AkayaTelivigala";
+    font-size: 3.25vh;
+}

@@ -1,0 +1,67 @@
+
+.grid_elements {
+    height: 33.33%;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.grid_element {
+    color: #000000;
+    background-color: #C4C4C4;
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    font-family: "AkayaTelivigala";
+    font-size: 3.25vh;
+    box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+}
+
+#find {
+    grid-area: 2 / 2 / 2 / 6;
+}
+
+#delete {
+    grid-area: 2 / 7 / 2 / 11;
+}
+
+#add {
+    grid-area: 4 / 2 / 4 / 6;
+}
+
+#end {
+    grid-area: 4 / 7 / 4 / 11;
+}
+
+.input_title {
+    grid-area: 2 / 2 / 2 / 6;
+    font-family: "PTSans";
+    font-size: 3.25vh;
+    font-weight: lighter;
+    color: #FFFFFF;
+}
+
+.input_name {
+    grid-area: 2 / 7 / 2 / 11;
+    font-family: "PTSans";
+    font-size: 2.875vh;
+    accent-color: #FF7700;
+}
+
+.confirm_function {
+    grid-area: 4 / 2 / 4 / 6;
+}
+
+.cancell_function {
+    grid-area: 4 / 7 / 4 / 11;
+}
+
+#find_item {
+  display: none;
+}
+
+#add_container {
+    display: none;
+}
